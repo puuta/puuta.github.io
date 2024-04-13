@@ -101,9 +101,18 @@ a {
             object-fit: contain;
         }
     }
+    .heroWrapper {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(
+            to bottom, 
+            var(--hero-color) 0%, 
+            var(--secondary-color) 90%, 
+            var(--background-color) 10%
+        );
+    }
     .heroSection {
         justify-content: center;
-        background-color: var(--hero-color);
         color: var(--light-font-color);
         padding-right: 30px;
         padding-left: 30px;
@@ -137,11 +146,6 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(
-            to bottom,
-            var(--hero-color) 65%,
-            var(--background-color) 35%
-        );
 
         .image-container {
             width: 30px;
@@ -197,12 +201,10 @@ a {
         padding-bottom: 50px;
 
         .aboutUs {
-            // background-color: #1E322A;
             width: 30%;
         }
         .contactUs {
             width: 30%;
-            // background-color: #B8BFB8;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -219,12 +221,9 @@ a {
             }
 
             .custom-icon {
-                font-size: 35px; /* Larger size */
+                font-size: 35px;
             }
             
-            // .socialLinks a:hover {
-            //     color: #555;          // Changes icon color on hover for visual feedback
-            // }
         }
     }
 }
