@@ -199,7 +199,12 @@ a {
         flex-direction: row;
         gap: 8%;
         padding-bottom: 50px;
-
+        background-image: url('./assets/images/forest.png');  // Update with the correct path
+        background-image: url('./assets/images/forest.png');
+        background-size: 100% 220%;  // Non-proportional scaling to fit the container differently
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-bottom: 100px;
         .aboutUs {
             width: 30%;
         }
