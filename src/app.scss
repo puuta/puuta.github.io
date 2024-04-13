@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@font-face {
+    font-family: 'KIONA';
+    src: url('./assets/fonts/Kiona-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KIONA';
+    src: url('./assets/fonts/Kiona-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+// Define base colors with SCSS variables
+$primary-color1-base: #1E322A;
+$primary-color2-base: #413D3C;
+$primary-color3-base: #000000;
+$primary-color4-base: #FFFF;
+$secondary-color1-base: #3F544B;
+$secondary-color2-base: #B8BFB8;
+$secondary-color3-base: #DCE6DC;
+$secondary-color4-base: #E0E4E0;
+
+// Export to CSS variables
+:root {
+    --light-font-color: #{$primary-color4-base};
+    --dark-font-color: #{$primary-color3-base};
+    --hero-color: #{$primary-color1-base};
+    --secondary-color: #{$secondary-color1-base};
+    --background-color: #{$primary-color4-base};
+    --base-font-family: 'Open Sans', sans-serif;
+    --heading-font-family: 'KIONA', serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--dark-font-color);
+    font-family: var(--base-font-family);
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font-family);
+    // margin: 0;
+}
+
+a {
+    color: var(--secondary-color);
+    &:hover {
+        filter: brightness(90%);
+    }
+}
+
+.firstPageContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        text-align: justify;  // This makes the text spread evenly across the line
+        line-height: 1.6;    // Increases line height for better readability
+    }
+    .header {
+        background-color: var(--secondary-color);
+        height: 100px;
+    }
+    .heroSection {
+        background-color: var(--hero-color);
+        color: var(--light-font-color);
+        padding-left: 80px;
+    }
+    .bottomSection {
+        padding-left: 80px;
+
+    }
+}
+
