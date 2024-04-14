@@ -44,6 +44,7 @@ body {
     margin: 0;
 }
 
+
 h1, h2, h3 {
     font-family: var(--heading-font-family);
 }
@@ -165,7 +166,7 @@ a {
             font-size: 120%;
         }
         .heroText {
-            width: 35%;
+            width: 40%;
             margin-top: -50px;
         }
         .image-container {
@@ -272,6 +273,72 @@ a {
             }
             
         }
+    }
+
+    @media (max-width: 768px) {
+
+
+        .heroSection {
+            flex-direction: column; /* Stack elements vertically */
+            .heroText {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+    
+        .image-container {
+            width: 100%; /* Full width to match the text div */
+            margin-top: -100px;
+            margin-left: -100px;
+        }
+    
+        h1 {
+            font-size: 40px; /* Smaller font size for better readability on smaller screens */
+        }
+
+        .header{
+            .image-container {
+                margin-top: 20px;
+            }
+            .link-container {
+               margin-left: -5px;
+            }
+            .link-container a {
+                margin-right: 20px; /* Space between links */
+            }
+        }
+
+
+        .image-container img {
+            width: 100%; /* Makes the image resize within the container */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 350px; /* Optional: Restrict the maximum height of the image */
+        }
+        .infoCircleContainer {
+            flex-direction: column; /* Stack info circles vertically */
+            align-items: center; /* Center-align the info circles horizontally */
+        }
+
+        .infoCircle {
+            // margin-top: 20px;
+            width: 150px; /* Smaller size for the circles */
+            height: 150px; /* Maintain aspect ratio for the circles */
+            margin-bottom: 20px; /* Space between stacked circles */
+            .image-container {
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+        }
+
+        .bottomSection {
+            flex-direction: column; /* Stack the children vertically */
+            align-items: center; /* Center-align the children horizontally */
+            gap: 20px; /* Provide some vertical spacing between stacked items */
+            .aboutUs, .contactUs {
+                width: 90%; /* Increase width to better fit the vertical layout */
+                margin-bottom: 50px;
+            }
+        }
+
     }
 }
 
