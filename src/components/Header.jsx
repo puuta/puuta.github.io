@@ -8,9 +8,9 @@ const Header = () => {
     return (
         <div className={`header ${headerClass}`}>
             <div className='link-container'>
-                <Link to="/">Etusivu</Link>
-                <Link to="/about">Meistä</Link>
-                <Link to="/sydanpuu">Sydänpuusta</Link>
+                <Link className='link' to="/">Etusivu</Link>
+                <Link className='link' to="/about">Meistä</Link>
+                <Link className='link' to="/sydanpuu">Sydänpuusta</Link>
             </div>
             <div className="image-container">
                 <img src={logo} alt="Puuta Design Logo" />

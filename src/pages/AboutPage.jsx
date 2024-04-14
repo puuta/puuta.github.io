@@ -1,5 +1,6 @@
-import woodprint from '../assets/images/woodprint.png'
+
 import jannasanna from '../assets/images/jannasanna.png'
+
 
 const AboutPage = () => {
     return (
@@ -19,7 +20,7 @@ const AboutPage = () => {
                     </p>
                 </div>
             </div>
-        </div>
+         </div>
     );
 }
 
