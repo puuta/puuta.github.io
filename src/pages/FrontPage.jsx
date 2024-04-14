@@ -28,12 +28,7 @@ const FrontPage = () => {
 
     return (
         <div className='firstPageContent'>
-            <Header />
-            {/* <div className='header'>
-                <div class="image-container">
-                    <img src={logo} alt="Puuta Design Logo" />
-                </div>
-            </div> */}
+            {/* <Header /> */}
             <div className='heroWrapper'>
                 <div className='heroSection'>
                     <div className='heroText'>

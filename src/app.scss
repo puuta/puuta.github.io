@@ -56,10 +56,104 @@ a {
     }
 }
 
+.jannasanna {
+    width: 100%;
+    position: relative;
+    height: 600px;
+    background-image: url('./assets/images/woodprint.png');
+    background-size: 600px 600px;
+    background-position: right center; 
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    background-repeat: no-repeat;
+}
+
+.foreground-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    // width: 100%;
+    height: 100%;
+    object-fit: contain; /* This makes the image cover the available space, without stretching */
+    z-index: 1; /* Ensures this image is on top */
+}
+
+
+.header {
+    color: var(--light-font-color);
+    height: var(--header-height);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 30px;
+
+    &.on-frontpage {
+        background-color: var(--hero-color);
+    }
+
+    &.on-aboutus {
+        background-color: var(--secondary-color);
+    }
+    .image-container {
+        width: 100px;
+        height: var(--header-height);
+        overflow: hidden;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        margin-left: auto; 
+    }
+
+    .link-container {
+        display: flex;
+        justify-content: center; 
+        flex-grow: 1; 
+        margin-left: 30px; 
+        margin-right: 30px;
+        font-family: var(--heading-font-family);
+        margin-top: -150px;
+        font-size: 20px;
+        padding-bottom: 10px; /* Provides space for the underline */
+    }
+
+    .link-container::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 44%;
+        width: 800px; /* Full width of the container */
+        height: 0.5px; /* Base height of the underline */
+        background: linear-gradient(to left, transparent 0%, var(--light-font-color) 50%, transparent 100%);
+        transform: translateX(-50%); /* Ensures the gradient is centered */
+    }
+
+    .link-container a {
+        margin-right: 100px; /* Space between links */
+        text-decoration: none; /* Removes underline from links */
+        color: var(--light-font-color); /* Ensures text color is consistent */
+        transition: filter 0.3s; /* Smooth transition for hover effect */
+    }
+    
+    .link-container a:last-child {
+        margin-right: 0; /* No right margin for the last link to avoid extra spacing */
+    }
+    
+    .link-container a:hover {
+        filter: brightness(50%); /* Darken link on hover for visibility */
+    }
+    
+
+}
+
 .firstPageContent {
     width: 100%;
     display: flex;
     flex-direction: column;
+    
 
     h1 {
         font-size: 80px;
@@ -80,68 +174,7 @@ a {
         line-height: 1.6;
         letter-spacing: 1.5px;
     }
-    .header {
-        background-color: var(--hero-color);
-        color: var(--light-font-color);
-        height: var(--header-height);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between; 
-        padding: 30px;
-        .image-container {
-            width: 100px;
-            height: var(--header-height);
-            overflow: hidden;
-        }
-        
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            margin-left: auto; 
-        }
 
-        .link-container {
-            display: flex;
-            justify-content: center; 
-            flex-grow: 1; 
-            margin-left: 30px; 
-            margin-right: 30px;
-            font-family: var(--heading-font-family);
-            margin-top: -150px;
-            font-size: 20px;
-            padding-bottom: 10px; /* Provides space for the underline */
-        }
-
-        .link-container::after {
-            content: "";
-            position: absolute;
-            top: 30px;
-            left: 44%;
-            width: 800px; /* Full width of the container */
-            height: 0.5px; /* Base height of the underline */
-            background: linear-gradient(to left, transparent 0%, var(--light-font-color) 50%, transparent 100%);
-            transform: translateX(-50%); /* Ensures the gradient is centered */
-        }
-
-        .link-container a {
-            margin-right: 100px; /* Space between links */
-            text-decoration: none; /* Removes underline from links */
-            color: var(--light-font-color); /* Ensures text color is consistent */
-            transition: filter 0.3s; /* Smooth transition for hover effect */
-        }
-        
-        .link-container a:last-child {
-            margin-right: 0; /* No right margin for the last link to avoid extra spacing */
-        }
-        
-        .link-container a:hover {
-            filter: brightness(50%); /* Darken link on hover for visibility */
-        }
-        
-
-    }
     .heroWrapper {
         display: flex;
         flex-direction: column;
@@ -319,7 +352,6 @@ a {
         }
 
         .infoCircle {
-            // margin-top: 20px;
             width: 150px; /* Smaller size for the circles */
             height: 150px; /* Maintain aspect ratio for the circles */
             margin-bottom: 20px; /* Space between stacked circles */
