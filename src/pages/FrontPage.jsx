@@ -89,6 +89,9 @@ const FrontPage = () => {
                     <p>
                         sannarytkonen3@gmail.com
                     </p>
+                    <p>
+                        janna.rissanen@gmail.com
+                    </p>
                     <SocialLinks />
                 </div>
             </div>
