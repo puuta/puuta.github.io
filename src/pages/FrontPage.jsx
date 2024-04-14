@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/images/logo_white.png';
+import Header from '../components/Header';
 import jakkara1 from '../assets/images/jakkara1.png';
 import finland from '../assets/images/finland.png';
 import star from '../assets/images/star.png';
@@ -28,11 +28,12 @@ const FrontPage = () => {
 
     return (
         <div className='firstPageContent'>
-            <div className='header'>
+            <Header />
+            {/* <div className='header'>
                 <div class="image-container">
                     <img src={logo} alt="Puuta Design Logo" />
                 </div>
-            </div>
+            </div> */}
             <div className='heroWrapper'>
                 <div className='heroSection'>
                     <div className='heroText'>
